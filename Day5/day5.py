@@ -6,26 +6,6 @@ with open('input.txt', 'r') as file_handle:
 	data = list(i.rstrip() for i in file_handle)
 
 
-
-def binary(target):
-	min_ = 0
-	max_ = 99
-	while True:
-		if (min_+max_)//2 == target:
-			return "found : ", (min_ + max_)//2
-		elif (min_ + max_)//2<target:
-			min_ = (min_ + max_)//2 + 1
-			print(min_)
-		elif (min_ + max_)//2>target:
-			max_ = (min_ + max_)//2
-			print(max_)
-
-#print(binary(98))
-
-"""
-Part 1
-"""
-
 def seatID(data):
 	seat_plan = {} 		#creating a dictionary with boardingpass as key and [row, seatnumber] in values
 	for boarding_pass in data:
